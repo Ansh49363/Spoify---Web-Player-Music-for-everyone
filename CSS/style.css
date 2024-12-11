@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Thin scrollbar width */
+    height: 6px;
+    /* Thin horizontal scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #333333;
+    /* Dark track color */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #555555;
+    /* Darker thumb */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888888;
+    /* Lighter color on hover */
+}
+
+:root {
+    --a: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.close {
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75VW;
+    margin: 16px 0;
+    position: relative;
+}
+
+.home ul li {
+    display: flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding-top: 14px;
+    padding: 17px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.logo {
+    width: 130px;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.footer a {
+    color: gray;
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 35, 35);
+    border-radius: 7px;
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+}
+
+.spotifyPlaylists H1 {
+    padding: 10px;
+}
+
+.cardContainer {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 57vh;
+}
+
+.card {
+    width: 190px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all 1.2s;
+}
+
+.card:hover {
+    background-color: #333333;
+    cursor: pointer;
+    --a: 1;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    /* height: 190px; */
+    width: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 162px;
+    right: 12px;
+    opacity: var(--a);
+    transition: all .9s ease-out;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.signbtn {
+    background-color: rgb(35, 35, 35);
+    font-size: 15px;
+    color: rgb(141, 141, 141);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signbtn:hover {
+    font-size: 16px;
+    color: white;
+}
+
+.logbtn {
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 21px;
+    border: none;
+    font-weight: bolder;
+    padding: 10px;
+    width: 90px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.logbtn:hover {
+    font-weight: bolder;
+    width: 92px;
+    background-color: rgb(224, 224, 224);
+}
+
+.playbar {
+    min-height: 40px;
+    position: fixed;
+    bottom: 25px;
+    background-color: rgb(54, 54, 54);
+    width: 68vw;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.songList {
+    height: 344px;
+    overflow: auto;
+    margin: 5px 0 22px 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.songList ul {
+    padding: 0 0px;
+}
+
+.songList ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid white;
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.playnow {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 14px;
+    width: 100%;
+}
+
+.songList .info {
+    font-size: 13px;
+    width: 344px;
+}
+
+.info div {
+    word-break: break-all;
+}
+
+.seekbar {
+    position: absolute;
+    bottom: 5px;
+    height: 3.5px;
+    width: 97%;
+    border-radius: 10px;
+    background-color: rgb(189, 189, 189);
+    border: 1px solid rgb(195, 195, 195);
+    cursor: pointer;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 13px;
+    position: relative;
+    bottom: 2px;
+    left: 0%;
+    transition: left 0.5s;
+    cursor: pointer;
+}
+
+.timevol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume {
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Style the range input */
+.range input[type="range"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    /* For WebKit browsers (Chrome, Safari) */
+    appearance: none;
+    /* For Firefox */
+    width: 75%;
+    /* Make it stretch to fit the container */
+    height: 5px;
+    /* Adjust the height of the range bar */
+    background: rgb(189, 189, 189);
+    /* Default track color */
+    border-radius: 5px;
+    /* Rounded corners for the track */
+    outline: none;
+    /* Remove the default focus outline */
+    transition: background 0.3s;
+    /* Smooth transition for color change */
+}
+
+/* Style the range thumb (the draggable part) */
+.range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 9px;
+    /* Thumb width */
+    height: 9px;
+    /* Thumb height */
+    background: rgb(255, 255, 255);
+    /* Thumb color */
+    border-radius: 50%;
+    /* Circular thumb */
+    cursor: pointer;
+    /* Change the cursor to pointer on hover */
+    transition: background 0.3s;
+    /* Smooth color change */
+}
+
+/* For Firefox */
+.range input[type="range"]::-moz-range-thumb {
+    width: 2px;
+    height: 20px;
+    background: rgb(221, 221, 221);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style when hovering over the thumb */
+.range input[type="range"]:hover::-webkit-slider-thumb {
+    background: #ffe7e7;
+    /* Change color on hover */
+}
+
+.range input[type="range"]:hover::-moz-range-thumb {
+    background: rgb(222, 222, 222);
+}
+
+/* Style the range track when it's active (being dragged) */
+.range input[type="range"]:active {
+    background: rgb(222, 222, 222);
+    /* Change track color when active */
+}
+
+.songinfo {
+    height: 0;
+    width: 170px;
+    color: white;
+    padding: 0 12px;
+}
+
+.songtime {
+    min-width: 80px;
+    color: white;
+    padding: 0 10px;
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+@media (max-width: 924px) {
+    .left {
+        padding: 0;
+        left: -130%;
+        position: absolute;
+        transition: all .3s;
+        z-index: 1;
+        width: 343px;
+        background-color: #252525;
+    }
+
+    .left .close {
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+    }
+
+    .right {
+        width: 120vw;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .playbar {
+        left: 12px;
+        width: 88vw;
+    }
+
+    .seekbar {
+        width: 87vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .card {
+        width: 70vw;
+    }
+
+    /* .card img{
+        width: 100%;
+        object-fit: contain;
+    } */
+
+    .cardContainer {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .abovebar {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .songinfo {
+        width: auto;
+        height: auto;
+    }
+
+    .timevol {
+        gap: 4px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .card:hover {
+        background-color: #333333;
+        cursor: pointer;
+        --a: 1;
+    }
+
+    .play {
+        top: 240px;
+        right: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        opacity: var(--a);
+        transition: all .9s ease-out;
+    }
+}
